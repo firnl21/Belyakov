@@ -16,7 +16,12 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-
+@app.route('/')
+def index():
+    if current_user.is_authenticated:
+        return redirect(url_for('profile'))
+    else:
+        return render_template('register.html')
 
     
 @app.route ('/perekus')
@@ -30,18 +35,6 @@ def katalog():
 @app.route ('/base')
 def base():
     return render_template('base.html')
-
-@app.route ('/login')
-def log():
-    return render_template('login.html')
-
-@app.route ('/register')
-def reg():
-    return render_template('register.html')
-
-@app.route ('/profile')
-def prof():
-    return render_template('profile.html')
 
 @app.route ('/nozhka')
 def nozhka():
