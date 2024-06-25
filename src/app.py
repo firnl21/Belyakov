@@ -40,7 +40,7 @@ def reg():
     return render_template('register.html')
 
 @app.route ('/profile')
-def perekus():
+def prof():
     return render_template('profile.html')
 
 @app.route ('/nozhka')
