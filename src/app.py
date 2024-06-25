@@ -39,6 +39,10 @@ def log():
 def reg():
     return render_template('register.html')
 
+@app.route ('/profile')
+def perekus():
+    return render_template('profile.html')
+
 @app.route ('/nozhka')
 def nozhka():
     return render_template('1nozhka.html')
