@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Маффины с голубикой и мускатным орехом</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/кап.png">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="maff" class="gora">Маффины с голубикой и мускатным орехом</a></h1>
+	<p class="gorka">Вы можете приготовить их без особых знаний в кулинарии.</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Давайте же скорее приготовим и насладимся прекрасным десертом!:</p>
+    <p class="gorkab">Ингредиенты: <br>
+Сливочное масло____________110 г<br>
+Пшеничная мука_____________290 г<br>
+Разрыхлитель_______________2 чайные ложки<br>
+Соль_______________________щепотка<br>
+Сахар______________________250 г<br>
+Голубика___________________1 стакан<br>
+Куриное яйцо_______________2 штуки<br>
+Ванильный экстракт_________2 чайные ложки<br>
+Молоко_____________________120 мл<br>
+Мускатный орех_____________¼ чайные ложки<br>
+</p>
+
+<hr> <img src="/static/img_/maffki.jpg" alt="" class="neg">
+
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork"><br>
+1.  Форму для маффинов смазать маслом и посыпать мукой.<br><br>
+
+2.  Венчиком смешать муку, соль, разрыхлитель. Голубику обвалять в двух чайных ложках мучной смеси.<br><br>
+  
+3.  Миксером на средней скорости взбить сливочное масло с сахаром (200 грамм). Займет это примерно четыре-пять минут. Затем по одному добавить яйца, потом — ваниль.<br><br>
+
+4.  Переключить миксер на самый медленный режим, всыпать муку, размешать и постепенно влить молоко. Размешивать надо, пока тесто не станет более-менее сходиться, тогда маффины получатся нежными и рыхлыми. Лопаточкой вмешать голубику.<br><br>
+
+5.  Разложить тесто в формочки. Оставшиеся 50 грамм сахара смешать с тертым мускатным орехом и посыпать шапки маффинов.<br><br>
+
+6.  Поставить будущие маффины в разогретую до 190 градусов духовку и продержать в ней примерно двадцать пять минут.<br><br>
+</p>
+<p class="gork">Этот прекрасный десерт вы можете запить <a href="glint" class="gork">тёплым глинтвейном</a></p>
+<p><a href="katalog" class="gork">Вернуться на главную</a></p>
+<hr><hr>
+</div>
+
+
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>

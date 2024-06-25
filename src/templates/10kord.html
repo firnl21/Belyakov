@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Кордон Блю</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/kord.jpg">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="kord" class="gora">Кордон Блю</a></h1>
+	<p class="gorka">На случай, если захотелось чего-то очень мясного</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Пора начинать, а то мы ждём - не дождёмся, когда эту вкуснятину подадут к столу!:</p>
+    <p class="gorkab">Ингредиенты: <br>
+Куриная грудка___________4 штуки <br>
+Сыр______________________100 г<br>
+Ветчина__________________4 штуки<br>
+Пшеничная мука___________100 г<br>
+Панировочные сухари______50 г<br>
+Куриное яйцо_____________1 штука<br>
+Оливковое масло__________4 столовые ложки<br>
+</p>
+
+<hr> <img src="/static/img_/kordn.jpg" alt="" class="neg">
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork"><br>
+1Куриное филе чуть отбить, чтобы в толщину оно составляло около 0,5 см. На каждый кусок выложить по одному ломтику ветчины и, более крупному, куску сыра. Поперчить, посолить. Края слепить при помощи деревянных шпажек. <br><br>
+2Шницель панируем: в одной тарелке насыпана мука, в другой взбитое яйцо, в третьей панировочные сухари. Обваливаем сначала в муке, затем в яйце, потом в сухарях и жарим на оливковом или сливочном масле с двух сторон. Делаем это на медленном огне и под крышкой, чтобы толстая котлета успела прожариться, а сыр расплавиться.<br>
+</p>
+<p class="gork">Мы советуем Вам в качестве десерта после этого прелестного блюда <a href="maff" class="gork">наши наивкуснейшие маффины</a></p>
+<p><a href="katalog" class="gork">Вернуться на главную</a></p>
+<hr><hr>
+</div>
+
+
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>

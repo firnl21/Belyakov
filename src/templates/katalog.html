@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/static/img/каталог.png">
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<title>Каталог</title>
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<h1 class="ron">Выберите нужное Вам блюдо:</h1>
+<hr>
+
+
+<table cellpadding="0" cellspacing="0">
+   <tr>
+    <td id="col"><a href="nozhka"><img src="/static/img_/ножка.jpg" alt="ножка" class="nog"></a></td>
+    <td id="col"><a href="buiabes"><img src="/static/img_/буйабес.jpg" alt="супчик" class="nog"></a></td>
+    <td id="col"><a href="aldente"><img src="/static/img_/овощи.jpg" alt="" class="nog"></a></td>
+   </tr>
+    <tr>
+    <td id="col"><p class="p">Утиная ножка Конфи</p><p class="ang">Второе блюдо</p></td>
+    <td id="col"><p class="p">Суп Буйабес</p><p class="ang">Горячее блюдо</p></td>
+    <td id="col"><p class="p">Овощи Альденте</p><p class="ang">Второе блюдо</p></td>
+   </tr>
+</table>
+     
+<table cellpadding="0" cellspacing="0">
+   <tr>
+    <td id="col"><a href="luk"><img src="/static/img_/lukov.jpg" alt="aspdmk" class="nog"></a></td>
+    <td id="col"><a href="graten"><img src="/static/img_/гратендофинуа.png" alt="" class="nog"></a></a></td>
+    <td id="col"><a href="zhulien"><img src="/static/img_/жюльен.jpg" alt="" class="nog"></a></a></td>
+   </tr>
+    <tr>
+    <td id="col"><p class="p">Луковый суп</p><p class="ang">Горячее блюдо</p></td>
+    <td id="col"><p class="p">Гратен Дофинуа</p><p class="ang">Второе блюдо</p></td>
+    <td id="col"><p class="p">Классический жульен</p><p class="ang">Второе блюдо</p></td>
+   </tr>
+</table>
+
+<table cellpadding="0" cellspacing="0">
+   <tr>
+    <td id="col"><a href="gov"><img src="/static/img_/gov.jpg" alt="" class="nog"></a></td>
+    <td id="col"><a href="shok"><img src="/static/img_/gan.jpg" alt="" class="nog"></a></td>
+    <td id="col"><a href="maff"><img src="/static/img_/maff.jpg" alt="" class="nog"></a></td>
+   </tr>
+    <tr>
+    <td id="col"><p class="p">Говядина по-бургундски</p><p class="ang">Второе блюдо</p></td>
+    <td id="col"><p class="p">Шоколадный капкейк с кремом ганаш</p><p class="ang">Десерт</p></td>
+    <td id="col"><p class="p">Маффины с голубикой и мускатным орехом</p><p class="ang">Десерт</p></td>
+   </tr>
+</table>
+
+<table cellpadding="0" cellspacing="0">
+   <tr>
+    <td id="col"><a href="kord"><img src="/static/img_/kord.jpg" alt="" class="nog"></a></td>
+    <td id="col"><a href="krev"><img src="/static/img_/krev.jpg" alt="" class="nog"></a></td>
+    <td id="col"><a href="kish"><img src="/static/img_/kish.jpg" alt="" class="nog"></a></td>
+   </tr>
+    <tr>
+    <td id="col"><p class="p">Кордон блю</p><p class="ang">Второе блюдо</p></td>
+    <td id="col"><p class="p">Креветки в сливочно-чесночном соусе</p><p class="ang">Второе блюдо</p></td>
+    <td id="col"><p class="p">Киш лорен</p><p class="ang">Второе блюдо</p></td>
+   </tr>
+</table>
+
+<table cellpadding="0" cellspacing="0">
+   <tr>
+    <td id="col"><a href="rat"><img src="/static/img_/рат.jpg" alt="" class="nog"></a></td>
+    <td id="col"><a href="gr"><img src="/static/img_/коктейль.png" alt="" class="nog"></a></td>
+    <td id="col"><a href="glint"><img src="/static/img_/глинтвейн.webp" alt="" class="nog"></a></td>
+   </tr>
+    <tr>
+    <td id="col"><p class="p">Рататуй</p><p class="ang">Второе блюдо</p></td>
+    <td id="col"><p class="p">Молочный коктейль</p> <p class="ang">Напитки</p></td>
+    <td id="col"><p class="p">Классический глинтвейн</p><p class="ang">Напитки</p></td>
+   </tr>
+</table>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+</script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Креветки в сливочно-чесночном соусе</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/krevetulya.png">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="krev" class="gora">Креветки в сливочно-чесночном соусе</a></h1>
+	<p class="gorka">Креветки - одни из самых любимых морепродуктов</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Ну что же, приступим!:</p>
+    <p class="gorkab">Ингредиенты: <br><br>
+Сливочное масло_______50 г<br>
+Чеснок________________2 зубчика<br>
+Креветки______________800 г<br>
+Рубленая петрушка_____3 столовые ложки<br>
+Соль__________________по вкусу<br>
+Сливки________________200 мл<br>
+</p>
+
+<hr> <img src="/static/img_/krevet.jpg" alt="krevet" class="neg">
+
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork">
+1.  В глубокой сковороде растопить масло, добавить чеснок и немного потушить.<br><br>
+2.  Налить сливки, все перемешать и довести до кипения. Соус готов.<br><br>
+3.  Далее добавить в сковороду очищенные креветки и тушить 8–9 минут. В самом конце добавить петрушку и перемешать.<br><br>
+4.  Вынуть креветки. Соус оставить на огне, пока он слегка не загустеет.<br><br>
+5.  Бросить креветки обратно в соус и подержать на огне 2 минуты — блюдо готово.<br><br>
+</p>
+<p class="gork">Приятного аппетита! Теперь можете вернуться в <a href="katalog" class="gork">каталог</a></p><hr><hr>
+</div>
+
+
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>

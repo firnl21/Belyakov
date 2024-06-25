@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Рататуй</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/кабачок.png">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="rat" class="gora">Рататуй</a></h1>
+	<p class="gorka">Пожалуй, самое популярное блюдо французской кухни</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Что ж, посмотрим, как готовить Рататуй!:</p>
+    <p class="gorkab">Ингредиенты: <br>
+Баклажаны____________________2 штуки<br>
+Молодые кабачки______________1 штука<br>
+Помидоры_____________________9 штук<br>
+Петрушка_____________________по вкусу<br>
+Чеснок_______________________1 головка<br>
+Оливковое масло______________5 столовых ложек<br>
+Соль_________________________по вкусу<br>
+Молотый черный перец_________по вкусу<br>
+Репчатый лук_________________1 штука<br>
+Сладкий перец________________1 штука<br>
+Сахар________________________1 столовая ложка <br>       
+</p>
+
+<hr> <img src="/static/img_/rat.jpg" alt="" class="neg">
+
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork"><br>
+1.  Баклажаны вымыть и нарезать тонкими кружочками, толщиной 2–3 мм. Посыпать солью и оставить минут на 20–30. Затем помыть от соли и обсушить.<br><br>
+
+2.  Кабачок и 5 помидоров вымыть, нарезать такими же кружками, как и баклажаны.<br><br>
+
+3.  Приготовить томатный соус: — лук очистить и мелко нарезать; — перец вымыть и вырезать семенную коробку, затем нарезать маленькими кубиками; — оставшиеся помидоры вымыть, бланшировать, снять кожицу и измельчить в блендере; — в разогретую сковороду выложить лук, немного посолить и обжарить до мягкости; — добавить перец и жарить, помешивая, 5 минут; — добавить измельченные помидоры, посолить, поперчить, добавить сахар и перемешать; — тушить все на слабом огне, изредка помешивая, минут 10–15.<br><br>
+
+4.  На дно формы для запекания выложить половину соуса (оставшийся соус отложить для подачи).<br><br>
+
+5.  Уложить овощи, чередуя кружок помидора, кружок баклажана, кружок кабачка. Таким образом укладывать овощи, пока не будет заполнена вся форма.<br><br>
+
+6.  Петрушку мелко порубить, чеснок очистить и мелко порубить.<br><br>
+
+7.  Рататуй посолить, посыпать рубленной зеленью с чесноком и сбрызнуть маслом.<br><br>
+
+8.  Накрыть форму пергаментной бумагой и запекать 1 час в духовке, нагретой до 190–200 градусов.<br><br>
+</p>
+<p class="gork">Спасибо за приготовление столь сложного блюда, а сейчас предлагаю вернуться в <a href="katalog">каталог и </a>выбрать новое блюдо для приготовления.</p>
+<hr><hr>
+</div>
+
+
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>

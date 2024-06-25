@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Луковый супчик</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/lak.png">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="luk" class="gora">Луковый супчик</a></h1>
+	<p class="gorka">Рецепт приготовления самого лучшего в мире Лукового супа!</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Ну что же, приступим!:</p>
+    <p class="gorkab">Ингредиенты: <br>
+Хороший лук____________1 кг<br>  
+Сливочное масло_________60 гр<br>
+Бульон_________________1 литр<br>
+Тимьян_________________6 веточек<br>
+Багет___________________1 шт.<br>
+Твёрдый сыр____________200 гр<br>
+</p>
+
+<hr> <img src="/static/img_/lukov.jpg" alt="" class="neg">
+
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork">
+1. Нарежьте лук тонкими полукольцами, пассеруйте 30 минут на сливочном масле в глубокой сковороде. В конце добавьте 2 зубчика измельченного чеснока и прованские травы. <br>
+2. Влейте 1 л горячего бульона и варите 15–20 минут до загустения.<br>
+3. Чтобы суп был еще вкуснее, снова влейте 1 л бульона и снова его выпарите. В супе останется только яркий вкус бульона.<br>
+4. Добавьте оставшийся бульон и доведите до кипения, влейте сливки и прогрейте все вместе.<br>
+5. Натрите сыр и добавьте в суп, перемешайте.<br>
+6. Попробуйте, посолите и поперчите по вкусу. Учитывайте степень солености бульона, который вы использовали для приготовления.<br>
+7. Нарежьте багет и поджарьте кусочки на сухой сковороде. По желанию их можно натереть чесноком.<br>
+8. Перед подачей в центр супа положите гренки и посыпьте зеленью.<br>
+</p>
+
+<p class="gork">Теперь вы знаете, как сделать ненастный день уютнее —  приготовить настоящий луковый суп, который подарит вам беззаботное французское настроение. </p>
+<p><a href="katalog" class="gork">Вернуться на главную</a></p>
+ <hr><hr>
+</div>
+
+
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>

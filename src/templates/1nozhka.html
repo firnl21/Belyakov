@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Утиная ножка</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/yo.png">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="nozhka" class="gora">Утиная ножка Конфи</a></h1>
+	<p class="gorka">На данной странице представлен рецепт самой вкусной <br> Утиной ножки "Конфи"</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Итак, начнем:</p>
+    <p class="gorkab">Ингредиенты: <br>
+	Утиные ножки______________1 штука <br>
+    Соль______________________по вкусу <br>
+    Молотый черный перец______по вкусу <br>
+    Свежий тимьян_____________1 стебель <br>
+    Свежий розмарин___________1 стебель <br>
+    Утиный жир________________75 г <br>
+    Чеснок____________________½ зубчика <br>
+</p>
+
+<hr> <img src="/static/img_/ножка.jpg" alt="ножка" class="neg">
+
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork">1.  Кожицу на утиных ножках острым ножом надрезать решёткой, слегка натереть солью и перцем. Сложить ножки в жаропрочную посуду, переложить веточками тимьяна и розмарина. Поставить мариноваться в холодное место на 24 часа.</p>
+<p class="gork">2.  Выбрать веточки тимьяна и розмарина, добавить пару неочищенных зубчиков чеснока, залить растопленным утиным жиром.</p>
+<p class="gork">3.  Духовку разогреть до 160 градусов, поставить в неё посуду с ножками и томить около 2 часов. Готовые ножки можно хранить в холодильнике длительное время, залив их большим количеством утиного жира.</p>
+<p class="gork">Поздравляем, Ваша Утиная ножка Конфи готова! Приятного аппетита!</p>
+<p><a href="katalog" class="gork">Вернуться на главную</a></p>
+ <hr><hr>
+</div>
+
+
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Молочный коктейль</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/nap.png">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="gr" class="gora">Молочный коктейль</a></h1>
+	<p class="gorka">Волшебный напиток, который, как окажется, очень прост в приготовлении!</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Вкус как из детства!:</p>
+     <p class="gorkab">Ингредиенты: <br>
+    Мороженое______________________________8 столовых ложек <br>
+    Молоко_________________________________250 мл <br>
+    Варенье, мёд или сироп___________________2 чайные ложки <br>
+</p>
+
+<hr> <img src="/static/img_/коктейль.png" alt="" class="neg">
+
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork">Блендером превратите мороженое и молоко в одну массу. Перелейте в однородный стакан. По желанию украсьте взбитыми сливками, я годами, сладостями. <br>
+<br> Также по желанию при блендировании можно добавить ягоды или фрукты для вкуса напитка.</p>
+<p class="gork">И вот уже готов Ваш молочный коктейль, пора пробовать!</p> 
+<p><a href="katalog" class="gork">Вернуться на главную</a></p>
+<hr><hr>
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>

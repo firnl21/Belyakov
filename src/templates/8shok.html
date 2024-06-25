@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Шоколадный капкейк с кремом ганаш</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styleKatalog.css') }}">
+	<link rel="icon" href="/static/img_/кексик.png">
+</head>
+
+<style>
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #FF7F50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+
+<style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: none;
+        }
+    </style>
+
+<body>
+	
+<a id="back-to-top" href="#top">Вернуться наверх</a>
+
+	
+<div>
+	<div id="progress-bar"></div>
+	<h1 class="gora"><a href="shok" class="gora">Шоколадный капкейк с кремом ганаш</a></h1>
+	<p class="gorka">Здесь представлен рецепт приготовления самого вкусного десерта у Вас дома!</p>
+</div>
+
+<hr><hr>
+
+<div>
+	<p class="gorkaa">Давайте начинать!:</p>
+    <p class="gorkab">Ингредиенты:  <br>
+Какао-порошок____________35 г<br>
+Ванильный экстракт_______10 мл<br>
+Свежесваренный кофе______90 мл<br>
+Пшеничная мука___________215 г<br>
+Разрыхлитель_____________½ чайные ложки<br>
+Соль_____________________¾ чайные ложки<br>
+Сливочное масло__________170 г<br>
+Сода_____________________½ чайные ложки<br>
+Сахар____________________215 г<br>
+Куриное яйцо_____________2 штуки<br>
+Сметана__________________120 г<br>
+Горький шоколад__________225 г<br>
+Сливки 35%-ные___________270 мл<br>
+Патока___________________40 г<br>
+</p>
+
+<hr> <img src="/static/img_/kap.jpg" alt="" class="neg">
+
+<p class="gork">ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:</p>
+<p class="gork">
+1.  Венчиком перемешать какао, кофе и ванильный экстракт. <br>
+ 
+2.  Таким же образом смешать муку, разрыхлитель, соду и соль.<br>
+
+3.  Растопить в сотейнике масло и сахар, затем взбить миксером 5 минут, пока масса не остынет. Добавить по одному яйца, затем смесь какао и кофе. Всыпать туда же половину мучной смеси, размешать. Следующей добавить сметану, тоже размешать. И только потом — оставшуюся мучную смесь.<br>
+
+4.  Разложить тесто по формочкам и отправить в разогретую до 175 градусов духовку минут на 20.<br>
+Изображение
+
+5.  Довести сливки с патокой до кипения. Мелко нарубить шоколад, положить его в широкое блюдо и залить горячими сливками. Через 15–20 секунд плавящиеся кусочки аккуратно лопаткой размешать в абсолютно гомогенную массу — начинать надо с середины, постепенно захватывая все больше шоколада.<br>
+
+6.  Поставить крем в холодильник и периодически помешивать, пока он не замерзнет настолько, что будет держать форму. Тогда выложить крем в кондитерский мешок и выдавить на готовые капкейки. Украсить кремовые купола золотистым драже.<br>
+</p>
+<p class="gork">Этот прекрасный десерт вы можете запить <a href="glint" class="gork">тёплым глинтвейном</a></p> 
+<p><a href="katalog" class="gork">Вернуться на главную</a></p>
+<hr><hr>
+</div>
+
+
+</body>
+
+<script>
+        window.onscroll = function() {updateProgressBar()};
+        
+        function updateProgressBar() {
+            let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrolled = window.scrollY;
+            let progress = (scrolled / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = progress + "%";
+        }
+    </script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
+
+</html>
